@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "name": "my-webpack-project",
+  "buildFolder": "build",
+  "scripts": {
+    "dev:start": "nodemon ./server/app.js",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "build:start": "npm run build:prod && node ./build/app.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "prettier": "^2.4.1",
+    "webpack": "^5.63.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15",
+    "pug": "^3.0.2"
+  }
+}
